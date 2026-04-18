@@ -9,8 +9,6 @@ OutDraw is a human vs AI party game where you draw things that humans will get, 
 - `HTML/CSS/JS`
 
 ## Prerequisites
-
-- Git
 - Node.js 18+
 - npm
 
