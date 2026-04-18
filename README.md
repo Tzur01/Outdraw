@@ -1,7 +1,12 @@
-<img width="1086" height="746" alt="Screenshot 2026-04-18 at 13 17 06" src="https://github.com/user-attachments/assets/1d1118f4-3cca-4186-b384-5a863dfb7878" />
+
 # OutDraw
 
-OutDraw is a human vs AI party game where you draw things that humans will get, but an AI won't!
+**OutDraw is a human vs AI party game where you draw things that humans will get, but an AI won't!**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1d1118f4-3cca-4186-b384-5a863dfb7878"
+       alt="OutDraw Screenshot"
+       width="600" />
+</p>
 
 ## Tech Stack
 
