@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lobby</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <main class="layout">
+        <section class="card screen active" id="screenLobby">
+          <h2>Lobby</h2>
+          <p>Party code: <span id="partyCode">----</span></p>
+          <ul id="playerList" class="list"></ul>
+          <div id="lobbyHostControls">
+            <button class="full" id="startGameBtn">Start game</button>
+            <button class="full" id="closePartyLobbyBtn">Close party</button>
+          </div>
+          <p class="error" id="lobbyError"></p>
+        </section>
+
+        <section class="card screen" id="screenPromptPick">
+          <h2>Pick a prompt</h2>
+          <p>Drawer: <span data-drawer-name>-</span></p>
+          <p>Time: <span data-round-timer>--</span></p>
+          <div id="promptOptions" class="list"></div>
+          <p id="promptPickHint"></p>
+        </section>
+
+        <section class="card screen" id="screenGameplay">
+          <div class="sceneTopBar">
+            <p class="sceneChip">Drawer: <span data-drawer-name>-</span></p>
+            <p class="sceneChip">Time: <span data-round-timer>--</span></p>
+            <p class="sceneChip" id="sceneRole">Role: -</p>
+            <button type="button" id="undoStrokeBtn" class="sceneTool">Undo</button>
+          </div>
+          <div class="gameplayShell">
+            <aside class="playerRail">
+              <h3>Players</h3>
+              <ul id="gamePlayerList" class="list compact"></ul>
+            </aside>
+            <section class="centerStage">
+              <p class="wordRibbon">Prompt: <span data-prompt-text>-</span></p>
+              <div class="canvasStack">
+                <canvas id="watchCanvas" width="280" height="280"></canvas>
+                <canvas id="drawCanvas" width="280" height="280"></canvas>
+              </div>
+              <p id="sceneHint"></p>
+              <div id="guessArea" class="guessBar">
+                <input id="guessInput" type="text" placeholder="Your guess" />
+                <button id="guessBtn">Submit</button>
+                <span id="guessAttemptsBadge"></span>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="card screen" id="screenResults">
+          <h2>Results</h2>
+          <p id="resultsStatus"></p>
+          <p id="resultsPrompt"></p>
+          <p id="resultsAi"></p>
+          <ul id="resultsList" class="list"></ul>
+          <div id="resultsHostControls">
+            <button class="full" id="nextRoundBtn">Next round</button>
+            <button class="full" id="newGameBtn">Start new game</button>
+            <button class="full" id="closePartyResultsBtn">Close party</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="client.js"></script>
+    <script src="lobby.js"></script>
+  </body>
+</html>

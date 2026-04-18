@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Scribble Party</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="home-page">
+    <div class="app homeApp">
+      <header class="homeHeader">
+        <p class="homeEyebrow">Draw things that humans will get, but an AI won't!</p>
+        <h1>OutDraw Game</h1>
+        <p class="homeSubhead">Draw fast. Guess faster.</p>
+      </header>
+
+      <main class="homeGrid">
+        <section class="card homeCard">
+          <div class="homeCardHead">
+            <h2>Join</h2>
+            <span class="homeChip">Code room</span>
+          </div>
+          <label for="joinName">Your name</label>
+          <input
+            id="joinName"
+            type="text"
+            placeholder="Player name"
+            autocomplete="nickname"
+            autofocus
+          />
+          <label for="joinCode">Party code</label>
+          <div class="row">
+            <input
+              id="joinCode"
+              type="text"
+              placeholder="ABCD"
+              maxlength="4"
+              autocomplete="off"
+              autocapitalize="characters"
+              spellcheck="false"
+            />
+            <button id="joinBtn">Join</button>
+          </div>
+          <p class="homeHint">Use the same 4 letter code from your host</p>
+          <p class="error" id="joinError"></p>
+        </section>
+
+        <section class="card homeCard">
+          <div class="homeCardHead">
+            <h2>Create</h2>
+            <span class="homeChip">Host room</span>
+          </div>
+          <label for="createName">Your name</label>
+          <input id="createName" type="text" placeholder="Host name" autocomplete="nickname" />
+          <button class="full" id="createBtn">Create Party</button>
+          <p class="homeHint">You will get a 4 letter room code to share</p>
+          <p class="error" id="createError"></p>
+        </section>
+      </main>
+    </div>
+
+    <script src="client.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

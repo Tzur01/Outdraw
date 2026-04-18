@@ -1,0 +1,23 @@
+{
+  "name": "quickdraw",
+  "version": "1.0.0",
+  "main": "main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "start:server": "node server/index.js"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^4.0.0",
+    "electron": "^39.2.7"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.17.0",
+    "canvas": "^3.2.1",
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  },
+  "optionalDependencies": {
+    "@tensorflow/tfjs-node": "^4.17.0"
+  }
+}
